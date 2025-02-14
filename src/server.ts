@@ -1,9 +1,12 @@
 import fastify from 'fastify'
+import { knex } from './database'
 
 const app = fastify()
 
-app.get('/', () => {
-  return 'Node.js application created'
+app.get('/', async () => {
+  const tables = await knex('sqlite_schema').select('*')
+
+  return tables
 })
 
 // app.listen returns a promise so because of that we can use .then to run code after the server is running
