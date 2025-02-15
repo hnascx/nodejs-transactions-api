@@ -1,5 +1,6 @@
 import fastify from 'fastify'
 import { knex } from './database'
+import { env } from './env'
 
 const app = fastify()
 
@@ -14,7 +15,7 @@ app.get('/', async () => {
 // app.listen returns a promise so because of that we can use .then to run code after the server is running
 app
   .listen({
-    port: 3333,
+    port: env.PORT,
   })
   .then(() => {
     console.log('HTTP server running on http://localhost:3333')
