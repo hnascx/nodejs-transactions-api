@@ -4,7 +4,9 @@ import { transactionsRoutes } from './routes/transactions'
 
 const app = fastify()
 
-app.register(transactionsRoutes)
+app.register(transactionsRoutes, {
+  prefix: 'transactions',
+})
 
 // app.listen returns a promise so because of that we can use .then to run code after the server is running
 app
