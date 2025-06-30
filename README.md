@@ -2,7 +2,7 @@
 
 API developed to manage transactions.
 
-Functional Requirements:
+### Functional Requirements
 
 Ability to create a new transaction.
 
@@ -12,7 +12,7 @@ Ability to list all completed transactions.
 
 Ability to view a single transaction.
 
-Business Rules:
+### Business Rules
 
 Transactions can be of type credit or debit.
 
